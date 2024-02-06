@@ -52,7 +52,14 @@ interface CliOptions {
     consola.error(err);
     process.exit(1);
   });
-
+/**
+ * 创建项目文件夹
+ *
+ * @param dirPath 项目文件夹路径
+ * @param dirname 项目名称
+ * @param options 命令行选项
+ * @returns Promise<void>
+ */
 async function create(dirPath: string, dirname: string, options: CliOptions): Promise<void> {
   const info = await getInfo();
   await fs.ensureDir(dirPath);

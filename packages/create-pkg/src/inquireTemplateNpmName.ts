@@ -1,7 +1,12 @@
 import inquirer from 'inquirer';
 import getInfo from './langs/index.js';
 
-
+/**
+ * 询问模板NPM名称
+ *
+ * @param workspace 是否创建子包
+ * @returns 返回选定的模板NPM名称
+ */
 export default async function inquireTemplateNpmName(workspace?: boolean) {
   const info = await getInfo();
   const baseTemplateChoices = [

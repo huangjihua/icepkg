@@ -3,6 +3,11 @@ import { checkAliInternal } from 'ice-npm-utils';
 import validateName from 'validate-npm-package-name';
 import getInfo from './langs/index.js';
 
+/**
+ * 查询包名
+ *
+ * @returns 返回包名
+ */
 export async function inquirePackageName() {
   const info = await getInfo();
   const isInternal = await checkAliInternal();
